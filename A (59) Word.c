@@ -1,46 +1,24 @@
 #include <stdio.h>
-#include <string.h>
+
 int main()
 {
-    char x[100];
-    int i,l=0,r=0;
+    int i,n,result=0;
+    scanf("%d",&n);
 
-    scanf("%s",x);
-
-    for(i=0; x[i]!='\0'; i++)
+    for(i=1;i<=n;i++)
     {
-        if(x[i]<96)
+        if(i%2)
         {
-            r++;
-        }
-        else
+            result-=i;
+            printf("result-%d\n",i);
+        }else
         {
-            l++;
+            result+=i;
+            printf("result+%d\n",i);
         }
     }
 
-    if(r<l || r==l)
-    {
-        for(i=0; x[i]!='\0'; i++)
-        {
-            if(x[i]<96)
-            {
-                x[i] +=32;
-            }
-        }
-    }else if(r>l)
-    {
-        for(i=0; x[i]!='\0'; i++)
-        {
-            if(x[i]>96)
-            {
-                x[i] -=32;
-            }
-        }
-    }
-
-    printf("%s\n",x);
-
+    printf("%d",result);
 
     return 0;
 }
