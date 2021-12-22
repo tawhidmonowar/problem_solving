@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main()
 {
     int i,n,result=0;
@@ -6,11 +7,17 @@ int main()
 
     if(n>0)
     {
-        result = n*(n+1)/2;
+        for(i=1; i<=n; i++)
+        {
+            result+=i;
+        }
     }
-    else if(n<0)
+    else if(n<=0)
     {
-        result = (1+n*(1-n)/2);
+        for(i=1; i>=n; i--)
+        {
+            result+=i;
+        }
     }
 
     printf("%d",result);
