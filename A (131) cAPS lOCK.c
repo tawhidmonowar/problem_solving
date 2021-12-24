@@ -1,79 +1,41 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
-int main(){
+int main()
+{
+    char str[1000];
+    gets(str);
 
-    char str[100];
-    scanf("%s", &str);
+    int i,count=0,j=strlen(str);
 
-    int l= strlen(str);
-    int count1=0, count2=0, count3=0;
-
-    if(l==1){
-            if(str[0]>='a' && str[0] <='z'){
-                 str[0]=str[0]-32;
-            }
-            else  if(str[0]>='A' && str[0] <='Z'){
-                 str[0]=str[0]+32;
-            }
-        printf("%c", str[0]);
+    for(i=0; i<j; i++)
+    {
+        if(str[i]==tolower(str[i]))
+            count++;
     }
 
-    else {
-        if(str[0]>='A' && str[0] <='Z'){
-        count3=1;
-    }
-
-    for(int i=1; i<l; i++){
-        if(str[i]>='A' && str[i] <='Z'){
-            count1=1;
+    if(count==0)
+    {
+        for(i=0; i<j; i++)
+        {
+            str[i]=tolower(str[i]);
         }
-        else{
-            count1=0;
-            break;
+        puts(str);
+    }
+
+    else if(count==1 && str[0]==tolower(str[0]))
+    {
+        str[0]=toupper(str[0]);
+        for(i=1; i<j; i++)
+        {
+            str[i]=tolower(str[i]);
         }
+        puts(str);
+    }
+    else
+    {
+        puts(str);
     }
 
-     for(int i=1; i<l; i++){
-        if(str[i]>='a' && str[i] <='z'){
-            count2=1;
-        }
-        else{
-            count2=0;
-            break;
-        }
-    }
-
-    if(count3==1 && count1==1){
-        for(int i=0; i<l; i++){
-
-        str[i]=str[i]+32;
-    }
-    }
-
-    else if(count3==0 && count1==1){
-
-         str[0]=str[0]-32;
-
-
-   for(int i=1; i<l; i++){
-
-        str[i]=str[i]+32;
-
-    }
-    }
-
-
-    printf("%c", str[0]);
-
-     for(int i=1; i<l; i++){
-        printf("%c", str[i]);
-    }
-
-
-    }
-
-
-
-return 0;
+    return 0;
 }
