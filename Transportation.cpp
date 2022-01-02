@@ -3,10 +3,10 @@ using namespace std;
 
 int main() {
 
-    int emptySeats,passengersWaiting;
+    int emptySeats, passengersWaiting;
     cin >> passengersWaiting;
-
-    cout << 50-(passengersWaiting%50);
+    emptySeats = 50-(passengersWaiting%50);
+    cout << emptySeats;
 
     return 0;
 }
