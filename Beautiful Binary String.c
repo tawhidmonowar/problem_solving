@@ -5,7 +5,6 @@ int main()
     int i,n,result=0;
     scanf("%d",&n);
     char binaryString[n];
-
     scanf("%s",binaryString);
 
     for(i=0;binaryString[i]!='\0';i++)
@@ -16,8 +15,6 @@ int main()
             i=i+2;
         }
     }
-
     printf("%d",result);
-
     return 0;
 }

@@ -12,7 +12,6 @@ int main()
         d=x/2;
     }
     else
-
     {
         s=r;
         x=b-r;

@@ -5,7 +5,6 @@ int main()
 {
     int i,j,n;
     double temp=0;
-
     scanf("%d",&n);
     int x[n];
 

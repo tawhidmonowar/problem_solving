@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     int i,n,reResult=0,reLoop=0,temp=0,rePeople=5;

@@ -23,5 +23,6 @@ int main()
 
     x=strlen(s);
     printf("%d",temp*x);
+
     return 0;
 }
