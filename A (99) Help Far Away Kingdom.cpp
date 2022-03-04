@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <string>
 #define loop(a,b) for (a;a<b;a++)
 using namespace std;
@@ -19,12 +20,16 @@ int main()
         }
         else if (x[i]=='.' && x[i+1]>='5')
         {
-            cout << (int)x[0]-47;
+            for(j=1; x[j]!='.'; j++)
+            {
+                cout << x[j-1];
+            }
+            printf("%c",x[j-1]+1);
             break;
         }
         else if (x[i]=='.' && x[i+1]<'5')
         {
-            for(j=0;x[j]!='.';j++)
+            for(j=0; x[j]!='.'; j++)
             {
                 cout << x[j];
             }
