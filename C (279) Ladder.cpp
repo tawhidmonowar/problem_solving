@@ -3,9 +3,14 @@
 #define endl "\n"
 using namespace std;
 
-void solve(int test_case)
+void solve()
 {
-    int n, q;
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt","r",stdin);
+        freopen("output.txt","w",stdout);
+    #endif
+
+        int n, q;
     cin >> n >> q;
 
     vector<int>vect;
@@ -58,19 +63,7 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
 
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt","r",stdin);
-        freopen("output.txt","w",stdout);
-    #endif
-
-    int testCase;
-    cin >> testCase;
-    int test_case = testCase;
-
-    while(testCase--)
-    {
-        solve(test_case-testCase);
-    }
+    solve();
 
     return 0;
 }
